@@ -25,6 +25,8 @@ components list:
 
 ![SRGAN](https://github.com/tensorlayer/srgan/raw/master/img/model.jpeg)
 
+## Data download link
+`!wget http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip`
 
 ## How To Use
 still to come
