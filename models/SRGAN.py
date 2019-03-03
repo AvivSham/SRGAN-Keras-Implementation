@@ -28,6 +28,9 @@ class SRGAN():
         self.shape_high_reso = (self.height_high_reso,self.width_high_reso,self.channels)
 
         self.samples = high_reso_imgs.shape[0]
+        print(self.samples.shape)
+        print(high_reso_imgs.shape)
+        print(low_reso_imgs.shape)
 
         opti_generator = Adam(generator_lr,0.9)
         opti_discriminator = Adam(discriminator_lr,0.9)
