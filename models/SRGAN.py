@@ -11,7 +11,7 @@ import tensorflow as tf
 class SRGAN():
   # Implementation of SRGAN from paper:
   # https://arxiv.org/abs/1609.04802
-    def __init__(self,lr_height = 64,lr_width = 64,channels = 3,
+    def __init__(self,high_reso_imgs,low_reso_imgs,lr_height = 64,lr_width = 64,channels = 3,
               upscale_factor = 4, generator_lr = 1e-4, discriminator_lr = 1e-4, gan_lr = 1e-4):
         self.height_low_reso = lr_height
         self.width_low_reso = lr_width
