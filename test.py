@@ -20,5 +20,5 @@ def test(FLAGS):
   srgan_model = SRGAN(high_reso,low_reso, lr_height = lr_height, lr_width = lr_width, channels = channels,
                       upscale_factor = upscale_factor, generator_lr = generator_lr,
                       discriminator_lr = discriminator_lr, gan_lr = gan_lr)
-  model_srgan.load_weights(load_weights_path)
+  srgan_model.load_weights(load_weights_path)
   plot_predict(low_reso,high_reso,srgan_model,n_images)
