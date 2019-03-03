@@ -1,4 +1,4 @@
-from .models.SRGAN import SRGAN
+from models.SRGAN import SRGAN
 from utils import *
 def train(FLAGS):
   
