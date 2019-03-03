@@ -15,7 +15,7 @@ def train(FLAGS):
   epochs = FLAGS.epochs
   
   high_reso, low_reso = prepare_data(dir_path)
-  srgan_model = SRGAN(lr_height = lr_height, lr_width = lr_width, channels = channels,
+  srgan_model = SRGAN(high_reso,low_reso, lr_height = lr_height, lr_width = lr_width, channels = channels,
                       upscale_factor = upscale_factor, generator_lr = generator_lr,
                       discriminator_lr = discriminator_lr, gan_lr = gan_lr)
   model_srgan.train(epochs, save_interval = save_interval, batch_size = batch_size)
