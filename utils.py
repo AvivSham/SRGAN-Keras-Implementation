@@ -18,7 +18,7 @@ def crop_center(img,cropx,cropy):
     starty = y//2-(cropy//2)    
     return img[starty:starty+cropy,startx:startx+cropx,:]
 
-def prepare_data(dir_path = dir_path, hr_reso = 256, lr_reso = 64)
+def prepare_data(dir_path = dir_path, hr_reso = 256, lr_reso = 64):
   img_list, img_low_list = [], []
   for i in os.listdir():
     if '.png' in i:
