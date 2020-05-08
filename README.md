@@ -1,4 +1,4 @@
-# SRGAN-Keras_Implementation
+# SRGAN-Keras-Implementation
 Implementing SRGAN - an Generative Adversarial Network model to produce high resolution photos.
 In this repository we have reproduced the SRGAN Paper - Which can be used on low resolution images to make them high resolution images. 
 The link to the paper can be found here: [SRGAN](https://arxiv.org/pdf/1609.04802.pdf)

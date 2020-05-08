@@ -1,13 +1,15 @@
 from tqdm import tqdm as tqdm
+
 import numpy as np
 import matplotlib.pyplot as plt
-from keras.models import Input, Model
-from keras.layers import BatchNormalization, LeakyReLU, Conv2D, Dense, \
-    Flatten, Add, PReLU, Conv2DTranspose, Lambda, UpSampling2D
-from keras.optimizers import Adam
-from keras.applications import VGG19
-from keras.callbacks import ReduceLROnPlateau
 import tensorflow as tf
+
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import BatchNormalization, LeakyReLU, Conv2D, Dense, \
+    Flatten, Add, PReLU, Conv2DTranspose, Lambda, UpSampling2D, Input
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.applications import VGG19
+from tensorflow.keras.callbacks import ReduceLROnPlateau
 
 
 class SRGAN():
@@ -123,7 +125,7 @@ class SRGAN():
         return PReLU()(x)
 
     def SubpixelConv2D(self, scale):
-        return Lambda(lambda x: tf.depth_to_space(x, scale))
+        return Lambda(lambda x: tf.nn.depth_to_space(x, scale))
 
     def build_generator(self, opti_generator, n_blocks=16):
         input_layer = Input(self.shape_low_reso)
